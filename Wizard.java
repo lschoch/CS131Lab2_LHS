@@ -27,7 +27,6 @@ public class Wizard implements Lockable {
 		this.health = 0;
 		this.key = 0;
 		this.locked = false;
-	
 	}//end empty-argument constructor
 	
 	/**
@@ -43,8 +42,7 @@ public class Wizard implements Lockable {
 		setKey(generator.nextInt(9001) + 1000); 
 		// Wizard can take damage on start.
 		this.locked = false;
-	
-	}//end constructor
+	}//end preferred constructor
 	
 	/**
 	 * This method processes the
@@ -58,7 +56,7 @@ public class Wizard implements Lockable {
 			health -= power;
 		if (health <= 0) {
 			System.out.println(name+" is out of power and is now locked.");
-			lock(this.key);
+			lock(key);
 		}
 	}//end takeDamage
 	
@@ -84,7 +82,6 @@ public class Wizard implements Lockable {
 			locked = false;
 		else
 			System.out.println("Unlock failed.");
-		
 	}//end unlock
 	
 	/**
@@ -93,8 +90,7 @@ public class Wizard implements Lockable {
 	 */
 	@Override
 	public boolean isLocked() {
-		return this.locked;
-		
+		return locked;
 	}//end isLocked
 	
 	/**
@@ -102,8 +98,7 @@ public class Wizard implements Lockable {
 	 * @return the current value for name
 	 */
 	public String getName() {
-		return this.name;
-	
+		return name;
 	}//end getName
 	
 	/**
@@ -112,25 +107,22 @@ public class Wizard implements Lockable {
 	 */
 	public void setName(String name) {
 		this.name = name;
-	
 	}//end setName
 	
 	/**																																
 	 * Getter for health
-	 * @return the current value for health
+	 * @return the current value for the health parameter
 	 */
 	public int getHealth() {
-		return this.health;
-	
+		return health;
 	}//end getHealth
 	
 	/**
 	 * Setter for health
-	 * @param health the value of health to be set
+	 * @param health the value of the health parameter to be set
 	 */
 	public void setHealth(int health) {
 		this.health = health;
-		
 	}//end setHealth
 	
 	/**
@@ -138,8 +130,7 @@ public class Wizard implements Lockable {
 	 * @return the current value of the key
 	 */
 	public int getKey() {
-		return this.key;
-		
+		return key;
 	}//end getKey
 	
 	/**
@@ -151,7 +142,6 @@ public class Wizard implements Lockable {
 		if (key > 0 && this.key <= 0) {
 			this.key = key;
 		}
-		
 	}//end setKey
 
 	@Override

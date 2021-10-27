@@ -37,7 +37,8 @@ public class Application {
 		System.out.println("Testing preferred constructor: ");
 		System.out.println(wizPreferred.toString()+"\n");
 		
-		// Test the remaining interface methods (setKey already tested).
+		// Test the remaining interface methods (setKey is tested with
+		// the getters/setters).
 		System.out.println("Testing isLocked method:");
 		System.out.println("isLocked: "+wiz.isLocked());
 		System.out.println("Testing lock method:");
@@ -47,9 +48,6 @@ public class Application {
 		wiz.unlock(wiz.getKey());
 		System.out.println("isLocked: "+wiz.isLocked());
 		
-		
-		
-		
-	}
+	}//end main
 
-}
+}//end class
